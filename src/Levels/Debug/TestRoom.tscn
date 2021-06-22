@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/VFX/shader/wind_sway.shader" type="Shader" id=1]
 [ext_resource path="res://src/Room/RoomTemplate.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://src/VFX/GodRay.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/Objects/Traps/Fan.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Objects/Platforms/PlatformAlt.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/Combat/Dummy/DummyEnemy.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -56,6 +57,7 @@ shader_param/heightOffset = 0.0
 shader_param/offset = 0.0
 
 [node name="TestRoom" instance=ExtResource( 2 )]
+position = Vector2( 1, 0 )
 full_screen_shader = false
 
 [node name="Anchor" parent="Anchors" index="0"]
@@ -139,6 +141,9 @@ position = Vector2( -64, -25 )
 
 [node name="GodRay" parent="TileMap/VFX" index="0" instance=ExtResource( 13 )]
 position = Vector2( 220.465, 102.827 )
+
+[node name="DummyEnemy" parent="Enemies" index="0" instance=ExtResource( 16 )]
+position = Vector2( 410.536, 255.461 )
 
 [node name="Gem" parent="Collectables" index="0" instance=ExtResource( 3 )]
 position = Vector2( 123, 240 )

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Player/HUD/Counter.gd" type="Script" id=2]
+
+[node name="Counter" type="Label"]
+margin_left = 20.0
+margin_top = 6.0
+margin_right = 26.0
+margin_bottom = 14.0
+text = "0"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="Tween" type="Tween" parent="."]

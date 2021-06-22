@@ -12,6 +12,7 @@ signal controller_changed(controller)
 
 # collectable
 signal collectable_collected(character, score)
+signal collectable_animation_completed
 signal collectable_max_value_counted(gems, acorns, carrots)
 
 # dialogue
